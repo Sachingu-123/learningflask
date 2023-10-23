@@ -4,6 +4,11 @@ from flask import Flask,render_template,request
 
 app=Flask(__name__)
 
+@app.route('/')
+@app.route('/home')
+def home():
+    return "<h1>Home Page</h1>"
+
 @app.route('/',methods=['GET'])
 def welcome():
     return "First Commit"
